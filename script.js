@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const indianCard = document.getElementById('card-indian');
     const japaneseCard = document.getElementById('card-japanese');
-    const cursor = document.querySelector('.custom-cursor');
-    const follower = document.querySelector('.custom-cursor-follower');
     const starsContainer = document.getElementById('stars');
 
     // 1. Navigation logic
@@ -17,11 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     indianCard.addEventListener('click', () => navigate('indian'));
     japaneseCard.addEventListener('click', () => navigate('japanese'));
 
-    // 2. Premium Custom Cursor
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.transform = `translate3d(${e.clientX - 10}px, ${e.clientY - 10}px, 0)`;
-        follower.style.transform = `translate3d(${e.clientX - 20}px, ${e.clientY - 20}px, 0)`;
-    });
 
     // 3. Ultra-Premium Card 3D Effect
     const handleCardTilt = (e, card) => {
@@ -43,15 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('mousemove', (e) => handleCardTilt(e, card));
         card.addEventListener('mouseleave', () => resetCardTilt(card));
         
-        // Cursor growth on hover
-        card.addEventListener('mouseenter', () => {
-            cursor.style.transform += ' scale(2.5)';
-            follower.style.border = '1px solid rgba(255, 255, 255, 1)';
-        });
-        card.addEventListener('mouseleave', () => {
-            cursor.style.transform = cursor.style.transform.replace(' scale(2.5)', '');
-            follower.style.border = '1px solid rgba(255, 255, 255, 0.5)';
-        });
     });
 
     // 4. Star Background Generator

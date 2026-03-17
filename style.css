@@ -14,7 +14,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none !important; /* Custom cursor implementation later */
+
 }
 
 body {
@@ -26,29 +26,6 @@ body {
     min-height: 100vh;
 }
 
-/* Custom Cursor */
-.custom-cursor {
-    width: 20px;
-    height: 20px;
-    background: white;
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: difference;
-    transition: transform 0.15s ease-out;
-}
-
-.custom-cursor-follower {
-    width: 40px;
-    height: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9998;
-    transition: transform 0.3s ease-out;
-}
 
 /* Cosmic Background */
 .background-container {
@@ -197,7 +174,7 @@ h1 i {
     border: 1px solid var(--glass-border);
     border-radius: 40px;
     overflow: hidden;
-    cursor: none;
+
     transition: var(--transition);
     transform-style: preserve-3d;
 }
@@ -265,7 +242,7 @@ h1 i {
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    cursor: none;
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 1rem;
