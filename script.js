@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Navigation logic
     const navigate = (destination) => {
         if (destination === 'indian') {
-            window.open('https://ttk-testing.vercel.app', '_blank'); 
+            window.open('https://india.talktokrishna.ai', '_blank'); 
         } else if (destination === 'japanese') {
-            window.open('https://talk-to-krishna-japan.vercel.app', '_blank');
+            window.open('https://japan.talktokrishna.ai', '_blank');
         }
     };
 
