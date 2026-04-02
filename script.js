@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'event_category': 'engagement',
                 'event_label': 'Go to Indian Portal'
             });
+            console.log('GA Event Sent: Indian Portal Clicked');
         }
         navigate('indian');
     });
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'event_category': 'engagement',
                 'event_label': 'Go to Japanese Portal'
             });
+            console.log('GA Event Sent: Japanese Portal Clicked');
         }
         navigate('japanese');
     });
