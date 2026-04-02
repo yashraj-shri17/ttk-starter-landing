@@ -12,8 +12,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    indianCard.addEventListener('click', () => navigate('indian'));
-    japaneseCard.addEventListener('click', () => navigate('japanese'));
+    indianCard.addEventListener('click', () => {
+        if (typeof gtag === 'function') {
+            gtag('event', 'portal_click', { 
+                'portal_type': 'indian',
+                'event_category': 'engagement',
+                'event_label': 'Go to Indian Portal'
+            });
+        }
+        navigate('indian');
+    });
+
+    japaneseCard.addEventListener('click', () => {
+        if (typeof gtag === 'function') {
+            gtag('event', 'portal_click', { 
+                'portal_type': 'japanese',
+                'event_category': 'engagement',
+                'event_label': 'Go to Japanese Portal'
+            });
+        }
+        navigate('japanese');
+    });
 
 
     // 3. Ultra-Premium Card 3D Effect
